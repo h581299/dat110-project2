@@ -57,7 +57,7 @@ public class Client extends Thread {
 
 	public void subscribe(String topic) {
 
-		SubscribeMsg msg = new SubscribeMsg(user, topic);
+		SubscribeMsg msg = new SubscribeMsg(topic);
 
 		send(msg);
 
@@ -65,7 +65,7 @@ public class Client extends Thread {
 
 	public void unsubscribe(String topic) {
 
-		UnsubscribeMsg msg = new UnsubscribeMsg(user, topic);
+		UnsubscribeMsg msg = new UnsubscribeMsg(topic);
 
 		send(msg);
 
@@ -73,7 +73,7 @@ public class Client extends Thread {
 
 	public void publish(String topic, String message) {
 
-		PublishMsg msg = new PublishMsg(user, topic, message);
+		PublishMsg msg = new PublishMsg(topic, message);
 
 		send(msg);
 
@@ -81,7 +81,7 @@ public class Client extends Thread {
 
 	public void createTopic(String topic) {
 
-		CreateTopicMsg msg = new CreateTopicMsg(user, topic);
+		CreateTopicMsg msg = new CreateTopicMsg(topic);
 
 		send(msg);
 
@@ -89,7 +89,7 @@ public class Client extends Thread {
 
 	public void deleteTopic(String topic) {
 
-		DeleteTopicMsg msg = new DeleteTopicMsg(user, topic);
+		DeleteTopicMsg msg = new DeleteTopicMsg(topic);
 
 		send(msg);
 

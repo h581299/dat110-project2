@@ -4,24 +4,14 @@ public class SubscribeMsg extends Message {
 
 	// message sent from client to subscribe on a topic 
 	
-	private String user;
 	private String topic;
 
-    public SubscribeMsg(String user, String topic) {
-    	this.user = user;
+    public SubscribeMsg(String topic) {
     	this.topic = topic;
-    }
-    
-    public String getUser() {
-    	return user;
     }
     
     public String getTopic() {
     	return topic;
-    }
-    
-    public void setUser(String user) {
-    	this.user = user;
     }
     
     public void setTopic(String topic) {
@@ -29,7 +19,7 @@ public class SubscribeMsg extends Message {
     }
     
     public String toString() {
-		return "bruker " + user + " og emne " + topic;
+		return "emne " + topic;
     	
     }
 

@@ -4,24 +4,14 @@ public class UnsubscribeMsg extends Message {
 
 	// message sent from client to unsubscribe on a topic 
 	
-	private String user;
 	private String topic;
 
-    public UnsubscribeMsg(String user, String topic) {
-    	this.user = user;
+    public UnsubscribeMsg(String topic) {
     	this.topic = topic;
     }
-    
-    public String getUser() {
-    	return user;
-    }
-    
+        
     public String getTopic() {
     	return topic;
-    }
-    
-    public void setUser(String user) {
-    	this.user = user;
     }
     
     public void setTopic(String topic) {
@@ -29,7 +19,7 @@ public class UnsubscribeMsg extends Message {
     }
     
     public String toString() {
-		return "bruker " + user + " og emne " + topic;
+		return "emne " + topic;
     	
     }
 

@@ -21,10 +21,18 @@ public class TemperatureDevice {
 		// - disconnect from the broker
 
 		// TODO - end
+		
+		Client client = new Client("sensor", "localhost", 8080);
+
+		client.connect();
+
+		for (int i = 0; i < COUNT; i++) {
+			client.publish("temperature", "the temperature is: " + sn.read());			
+		}
+		
+		client.disconnect();
 
 		System.out.println("Temperature device stopping ... ");
-
-		throw new UnsupportedOperationException(TODO.method());
 
 	}
 }
